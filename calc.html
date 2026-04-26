@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+
+<div class="calculator">
+  <div class="display">
+    <div id="history"></div>
+    <div id="result">0</div>
+  </div>
+
+  <div class="buttons">
+    <!-- Row 1 -->
+    <button class="btn gray" onclick="clearAll()">AC</button>
+    <button class="btn gray" onclick="deleteLast()">DEL</button>
+    <button class="btn" onclick="append('%')">%</button>
+    <button class="btn orange" onclick="appendOperator('/')">/</button>
+
+    <!-- Row 2 -->
+    <button class="btn" onclick="append('7')">7</button>
+    <button class="btn" onclick="append('8')">8</button>
+    <button class="btn" onclick="append('9')">9</button>
+    <button class="btn orange" onclick="appendOperator('*')">*</button>
+
+    <!-- Row 3 -->
+    <button class="btn" onclick="append('4')">4</button>
+    <button class="btn" onclick="append('5')">5</button>
+    <button class="btn" onclick="append('6')">6</button>
+    <button class="btn orange" onclick="appendOperator('-')">-</button>
+
+    <!-- Row 4 -->
+    <button class="btn" onclick="append('1')">1</button>
+    <button class="btn" onclick="append('2')">2</button>
+    <button class="btn" onclick="append('3')">3</button>
+    <button class="btn orange" onclick="appendOperator('+')">+</button>
+
+    <!-- Row 5 -->
+    <button class="btn zero" onclick="append('0')">0</button>
+    <button class="btn" onclick="append('.')">.</button>
+    <button class="btn orange" onclick="calculate()">=</button>
+  </div>
+</div>
+
+<script src="calc.js"></script>
+</body>
+</html>
